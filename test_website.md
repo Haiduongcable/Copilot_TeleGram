@@ -1,0 +1,3 @@
+I have backend that running in localhost:8000, you can read completion_*.md to know about backend. 
+My frontend is in folder frontend. You can use `flutter run -d web-server` to start the frontend.
+After start: Use the Playwright MCP Server to navigate to the website http://localhost:***(this is my local website dev in flutter in /frontend). Ensure that the MCP Server is actively handling the browser automation to validate its integration. Do not simulate the tests statically or bypass the MCP Server. All interactions must be routed through MCP.You should interact with this website, try to find the reason why the frontend still loading without show anything.

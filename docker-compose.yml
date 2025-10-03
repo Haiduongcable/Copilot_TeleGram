@@ -1,0 +1,17 @@
+services:
+  mongo:
+    build:
+      context: .
+      dockerfile: docker/mongo/Dockerfile
+    container_name: telegramapp-mongo
+    privileged: true
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: telegramapp
+      MONGO_INITDB_ROOT_PASSWORD: telegramapp
+    ports:
+      - "27017:27017"
+    # volumes:
+    #   - ./PVC/mongo_data:/data/db
+    #   - ./PVC/mongo_config:/data/configdb
+    command: ["mongod", "--auth", "--bind_ip_all"]

@@ -1,0 +1,23 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    avoid_print: true
+    cancel_subscriptions: true
+    close_sinks: true
+    depend_on_referenced_packages: false
+    always_declare_return_types: true
+    public_member_api_docs: false
+    directives_ordering: true
+    unawaited_futures: true
+    prefer_const_constructors: true
+
+analyzer:
+  exclude:
+    - build/**
+    - lib/**.g.dart
+    - lib/**.freezed.dart
+    - lib/**.generated.dart
+  plugins:
+    - custom_lint

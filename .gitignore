@@ -1,0 +1,444 @@
+# ============================================================================
+# TeleGramApp - Comprehensive .gitignore
+# ============================================================================
+
+# ============================================================================
+# Environment & Secrets
+# ============================================================================
+.env
+.env.local
+.env.*.local
+*.env
+.env.production
+.env.staging
+.env.development
+.playwright-mcp/
+.pytest_cache/
+.vscode/
+.dart_tool/
+.idea/
+frontend/android/
+frontend/build/
+frontend/web/
+frontend/windows/
+frontend/ios/
+frontend/macos/
+frontend/linux/
+secrets/
+*.key
+*.pem
+*.p12
+*.jks
+keystore.properties
+
+# ============================================================================
+# Python Backend (FastAPI)
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+backend/.venv/
+backend/venv/
+backend/env/
+backend/ENV/
+backend/.python-version
+
+# Distribution / packaging
+backend/.Python
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/share/python-wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/MANIFEST
+
+# PyInstaller
+backend/*.manifest
+backend/*.spec
+
+# Unit test / coverage reports
+backend/htmlcov/
+backend/.tox/
+backend/.nox/
+backend/.coverage
+backend/.coverage.*
+backend/.cache
+backend/nosetests.xml
+backend/coverage.xml
+backend/*.cover
+backend/*.log
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+backend/.ruff_cache/
+
+# Jupyter Notebook
+backend/.ipynb_checkpoints
+
+# pyenv
+backend/.python-version
+
+# Celery
+backend/celerybeat-schedule
+backend/celerybeat.pid
+
+# Uploads and media files
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/media/
+backend/static/uploads/
+
+# ============================================================================
+# Flutter Frontend
+# ============================================================================
+# Miscellaneous
+frontend/*.class
+frontend/*.lock
+frontend/*.log
+frontend/*.pyc
+frontend/*.swp
+frontend/.DS_Store
+frontend/.atom/
+frontend/.buildlog/
+frontend/.history
+frontend/.svn/
+frontend/migrate_working_dir/
+
+# IntelliJ related
+frontend/*.iml
+frontend/*.ipr
+frontend/*.iws
+frontend/.idea/
+frontend/.idea/*
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+frontend/.vscode/
+
+# Flutter/Dart/Pub related
+frontend/**/doc/api/
+frontend/**/ios/Flutter/.last_build_id
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+frontend/.pub/
+frontend/build/
+frontend/flutter_*.png
+frontend/linked_*.ds
+frontend/unlinked.ds
+frontend/unlinked_spec.ds
+
+# Android related
+frontend/**/android/**/gradle-wrapper.jar
+frontend/**/android/.gradle
+frontend/**/android/captures/
+frontend/**/android/gradlew
+frontend/**/android/gradlew.bat
+frontend/**/android/local.properties
+frontend/**/android/**/GeneratedPluginRegistrant.java
+frontend/**/android/key.properties
+frontend/.android/
+frontend/**/android/.idea/
+frontend/**/android/**/build/
+
+# iOS/XCode related
+frontend/**/ios/**/*.mode1v3
+frontend/**/ios/**/*.mode2v3
+frontend/**/ios/**/*.moved-aside
+frontend/**/ios/**/*.pbxuser
+frontend/**/ios/**/*.perspectivev3
+frontend/**/ios/**/*sync/
+frontend/**/ios/**/.sconsign.dblite
+frontend/**/ios/**/.tags*
+frontend/**/ios/**/.vagrant/
+frontend/**/ios/**/DerivedData/
+frontend/**/ios/**/Icon?
+frontend/**/ios/**/Pods/
+frontend/**/ios/**/.symlinks/
+frontend/**/ios/**/profile
+frontend/**/ios/**/xcuserdata
+frontend/**/ios/.generated/
+frontend/**/ios/Flutter/.last_build_id
+frontend/**/ios/Flutter/App.framework
+frontend/**/ios/Flutter/Flutter.framework
+frontend/**/ios/Flutter/Flutter.podspec
+frontend/**/ios/Flutter/Generated.xcconfig
+frontend/**/ios/Flutter/ephemeral
+frontend/**/ios/Flutter/app.flx
+frontend/**/ios/Flutter/app.zip
+frontend/**/ios/Flutter/flutter_assets/
+frontend/**/ios/Flutter/flutter_export_environment.sh
+frontend/**/ios/ServiceDefinitions.json
+frontend/**/ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+frontend/**/macos/Flutter/GeneratedPluginRegistrant.swift
+frontend/**/macos/Flutter/ephemeral
+
+# Linux
+frontend/**/linux/flutter/generated_plugin_registrant.cc
+frontend/**/linux/flutter/generated_plugin_registrant.h
+frontend/**/linux/flutter/generated_plugins.cmake
+
+# Windows
+frontend/**/windows/flutter/generated_plugin_registrant.cc
+frontend/**/windows/flutter/generated_plugin_registrant.h
+frontend/**/windows/flutter/generated_plugins.cmake
+
+# Coverage
+frontend/coverage/
+
+# Symbols
+frontend/app.*.symbols
+
+# Exceptions to above rules.
+!frontend/**/ios/**/default.mode1v3
+!frontend/**/ios/**/default.mode2v3
+!frontend/**/ios/**/default.pbxuser
+!frontend/**/ios/**/default.perspectivev3
+!frontend/.vscode/settings.json
+!frontend/.vscode/tasks.json
+!frontend/.vscode/launch.json
+!frontend/.vscode/extensions.json
+
+# ============================================================================
+# Docker
+# ============================================================================
+# Docker volumes and persistent data
+PVC/mongo_data/*
+!PVC/mongo_data/.gitkeep
+PVC/mongo_config/*
+!PVC/mongo_config/.gitkeep
+docker/volumes/
+*.dockerignore.backup
+
+# Docker Compose override files
+docker-compose.override.yml
+docker-compose.*.override.yml
+
+# ============================================================================
+# Database
+# ============================================================================
+# MongoDB
+*.mongorc.js
+mongod.lock
+WiredTiger*
+*.wt
+journal/
+diagnostic.data/
+*.bson
+*.dump
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.pgsql
+
+# ============================================================================
+# IDEs and Editors
+# ============================================================================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+cmake-build-*/
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# Operating Systems
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Logs and Temporary Files
+# ============================================================================
+*.log
+*.log.*
+logs/
+log/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+tmp/
+temp/
+
+# ============================================================================
+# Testing
+# ============================================================================
+# Test results
+test-results/
+test-output/
+.nyc_output/
+*.test.js.snap
+
+# ============================================================================
+# Build artifacts
+# ============================================================================
+dist/
+build/
+*.apk
+*.aab
+*.ipa
+*.app
+*.dSYM/
+
+# ============================================================================
+# Dependency directories
+# ============================================================================
+node_modules/
+jspm_packages/
+bower_components/
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+
+# Certificates
+*.cert
+*.crt
+*.der
+
+# Backup files
+*~
+*.orig
+*.rej
+
+# Lock files (keep pubspec.lock for Flutter, but ignore others if needed)
+# package-lock.json
+# yarn.lock
+# Pipfile.lock (comment out if you want to track it)
+
+# Generated files
+*.generated.dart
+*.g.dart
+*.freezed.dart
+*.config.dart
+# Uncomment if you don't want to track generated files:
+# **/*.g.dart
+# **/*.freezed.dart
+
+# Documentation builds
+docs/_build/
+site/
+
+# ============================================================================
+# Project-specific
+# ============================================================================
+# Custom test files that shouldn't be tracked
+backend/tests/test_local.py
+frontend/test/local_test.dart
+
+# Local scripts
+*.local.sh
+*.local.py
+
+# Notes and scratch files
+NOTES.md
+TODO.md
+SCRATCH.md
+notes.txt
+scratch/
